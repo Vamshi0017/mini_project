@@ -17,6 +17,11 @@ function myfunc(){
         window.open("m1.html");
     }
 }
-function hint(){
-    document.getElementById("hint").innerHTML = f.value;
-}
+const form = document.getElementById("form");
+form.addEventListener('submit',function(e){
+    e.preventDefault();
+localStorage.setItem("username",b.value);
+localStorage.setItem("password",c.value);
+localStorage.setItem("hint",f.value);
+window.location.href = "m1.js";
+})
